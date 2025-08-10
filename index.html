@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galang Imanta – Data Portfolio</title>
+  <meta name="description" content="Data analytics, BI, and data engineering portfolio of Galang Imanta: dashboards, ETL pipelines (Airflow/Hadoop), OpenSearch, and case studies." />
+  <meta name="author" content="Galang Imanta" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Galang Imanta – Data Portfolio" />
+  <meta property="og:description" content="Data analytics, BI, and data engineering projects: SIPD Hub, Hive/ORC pipelines, OpenSearch, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://galangimanta97.github.io" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --panel: #111418;
+      --text: #e7ecf3;
+      --muted: #9fb0c3;
+      --brand: #7cc5ff;
+      --accent: #80ffea;
+      --ring: 0 0 0 2px color-mix(in oklab, var(--brand), transparent 70%);
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#f7f9fc; --panel:#ffffff; --text:#0c1117; --muted:#516275; --brand:#0069ff; --accent:#00c2a8; }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--text); background:radial-gradient(1200px 600px at 70% -10%, color-mix(in oklab, var(--brand), transparent 85%), transparent 70%), var(--bg)}
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1080px; margin:0 auto; padding:24px}
+
+    /* Header */
+    header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(10px); background:color-mix(in oklab, var(--bg), transparent 35%); border-bottom:1px solid color-mix(in oklab, var(--muted), transparent 65%);}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{font-weight:800; letter-spacing:.2px}
+    .nav a{opacity:.9}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border-radius:999px; background:linear-gradient(180deg, color-mix(in oklab, var(--brand), white 15%), var(--brand)); color:white; box-shadow:0 8px 30px -8px color-mix(in oklab, var(--brand), transparent 70%)}
+    .btn:hover{text-decoration:none; filter:brightness(1.02)}
+    .ghost{background:transparent; color:var(--text); border:1px solid color-mix(in oklab, var(--muted), transparent 60%)}
+
+    /* Layout blocks */
+    .grid{display:grid; gap:20px}
+    .grid.col-3{grid-template-columns:repeat(3, 1fr)}
+    .grid.col-2{grid-template-columns:repeat(2, 1fr)}
+    @media (max-width:900px){ .grid.col-3{grid-template-columns:1fr 1fr} }
+    @media (max-width:680px){ .grid.col-3,.grid.col-2{grid-template-columns:1fr} }
+
+    section{padding:48px 0}
+    h1{font-size:clamp(28px, 5vw, 48px); line-height:1.1; margin:0}
+    h2{font-size:clamp(18px, 3vw, 28px); margin:0 0 16px}
+    p{margin:8px 0; color:var(--muted)}
+    .panel{background:linear-gradient(180deg, color-mix(in oklab, var(--panel), transparent 20%), color-mix(in oklab, var(--panel), transparent 0%)); border:1px solid color-mix(in oklab, var(--muted), transparent 70%); border-radius:18px; padding:18px}
+    .chip{display:inline-flex; align-items:center; padding:6px 10px; border-radius:999px; background:color-mix(in oklab, var(--brand), transparent 90%); border:1px solid color-mix(in oklab, var(--brand), transparent 70%); color:var(--brand); font-size:12px}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center}
+    .hero .card{padding:24px; border-radius:22px}
+    .badge{font-weight:600; letter-spacing:.5px}
+    .pillrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+
+    /* Cards */
+    .card{background:linear-gradient(180deg, color-mix(in oklab, var(--panel), transparent 10%), color-mix(in oklab, var(--panel), transparent 0%)); border:1px solid color-mix(in oklab, var(--muted), transparent 70%); border-radius:18px; padding:16px}
+    .card h3{margin:4px 0 8px; font-size:18px}
+    .card .meta{font-size:12px; color:var(--muted)}
+
+    /* Timeline */
+    .timeline{position:relative}
+    .timeline::before{content:""; position:absolute; top:8px; bottom:8px; left:10px; width:2px; background:color-mix(in oklab, var(--muted), transparent 70%)}
+    .titem{position:relative; padding-left:28px; margin:14px 0}
+    .titem::marker{content:none}
+    .titem::before{content:""; position:absolute; left:5px; top:8px; width:10px; height:10px; border-radius:50%; background:var(--brand); box-shadow:0 0 0 3px color-mix(in oklab, var(--brand), transparent 75%)}
+
+    footer{padding:36px 0; border-top:1px dashed color-mix(in oklab, var(--muted), transparent 65%); color:var(--muted); font-size:14px}
+    .sr{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+
+    .toggle{cursor:pointer; border:none; background:transparent; color:var(--muted)}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Galang Imanta",
+    "url": "https://galangimanta97.github.io",
+    "jobTitle": "Data Analyst | Business Intelligence | Data Scientist",
+    "sameAs": [
+      "https://www.linkedin.com/in/galang-imanta-ba9491140",
+      "https://github.com/galangimanta97"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Galang Imanta</div>
+      <nav style="display:flex; gap:14px; align-items:center">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" class="toggle" aria-label="Toggle theme">🌗</button>
+        <a class="btn ghost" href="#cv" onclick="document.getElementById('cv').scrollIntoView({behavior:'smooth'}); return false;">Download CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="intro-heading">
+      <div class="card">
+        <span class="chip badge">DATA • BI • ETL</span>
+        <h1 id="intro-heading">Turning messy data into clear decisions.</h1>
+        <p>Hi, I’m <strong>Galang</strong> — a data professional with 4+ years experience in analytics, BI, and data engineering across telco, edtech, and government. I build dashboards, automate pipelines, and uncover insights with <strong>PostgreSQL, Python, BigQuery, Hadoop</strong>, and <strong>OpenSearch</strong>.</p>
+        <div class="pillrow">
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">Python / Pandas</span>
+          <span class="chip">Airflow</span>
+          <span class="chip">Hadoop / Hive / ORC</span>
+          <span class="chip">Looker Studio / Tableau</span>
+          <span class="chip">OpenSearch</span>
+        </div>
+        <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/galang-imanta-ba9491140" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/galangimanta97" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="card panel">
+        <h2 style="margin-bottom:6px">Quick highlights</h2>
+        <ul class="timeline" style="margin:0; padding-left:0; list-style:none">
+          <li class="titem"><strong>Ministry of Home Affairs (Pusdatin)</strong> — Data analysis & ETL for SIPD-Hub / E-Database; education–population studies for out-of-school mapping (2025).</li>
+          <li class="titem"><strong>Smartfren for Business</strong> — Revenue & churn analytics, customer segmentation (HVC), automated reporting (2023–2024).</li>
+          <li class="titem"><strong>Ruangguru</strong> — Built data marts + dashboards with BigQuery & Looker Studio (2022).</li>
+          <li class="titem"><strong>Niagahoster</strong> — Operational dashboards in Metabase, Python reporting (2020–2022).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Featured projects</h2>
+      <div class="grid col-3">
+        <article class="card">
+          <h3>SIPD Hub Analytics</h3>
+          <p class="meta">Gov data • PostgreSQL • Hadoop • OpenSearch</p>
+          <p>Integrated SIPD-Hub and E-Database sources; built ETL with Airflow and published interactive visualizations for policy stakeholders.</p>
+          <p><em>Impact:</em> Faster decision cycles via centralized, validated datasets.</p>
+        </article>
+        <article class="card">
+          <h3>Hive/ORC Data Lake Pipeline</h3>
+          <p class="meta">Airflow • PySpark • Hive • ORC</p>
+          <p>Orchestrated ingestion from multiple PostgreSQL sources, merged geometry, wrote to HDFS as ORC, and registered external tables in Hive.</p>
+          <p><em>Impact:</em> Query latency reduced and storage optimized for downstream analytics.</p>
+        </article>
+        <article class="card">
+          <h3>OpenSearch ML Exploration</h3>
+          <p class="meta">OpenSearch • ML • Dashboards</p>
+          <p>Researched feasibility of OpenSearch for analytics + lightweight ML. Prototyped dashboards and anomaly exploration for large datasets.</p>
+          <p><em>Outcome:</em> Clear guidance on platform adoption and limits.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" aria-labelledby="exp-heading">
+      <h2 id="exp-heading">Experience</h2>
+      <div class="grid col-2">
+        <div class="card">
+          <h3>Data Scientist — Pusdatin Kemendagri</h3>
+          <p class="meta">May 2025 – Present · Central Jakarta</p>
+          <ul>
+            <li>Analyzed education + population data to map out-of-school children by province.</li>
+            <li>Maintained datasets across PostgreSQL, Hadoop, and OpenSearch (SIPD-Hub, SIPD, E-Database).</li>
+            <li>Built Airflow DAGs for population, education, BPJS, and Kemenko PMK data.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Service & Customer Analytics Sr. Specialist — Smartfren</h3>
+          <p class="meta">Feb 2023 – May 2024 · Central Jakarta</p>
+          <ul>
+            <li>Automated revenue/churn/after-sales reporting with PostgreSQL + Pentaho.</li>
+            <li>Built customer profiles & HVC segmentation for enterprise accounts.</li>
+            <li>Delivered business planning reports for Finance & Enterprise teams.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>BI Analyst — Ruangguru</h3>
+          <p class="meta">Jan 2022 – Nov 2022 · South Jakarta</p>
+          <ul>
+            <li>Developed ETL and data marts; validated operational transactions.</li>
+            <li>Dashboards & insights via BigQuery + Looker Studio.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Data Analyst — Niagahoster</h3>
+          <p class="meta">Feb 2020 – Jan 2022 · Yogyakarta</p>
+          <ul>
+            <li>Built performance dashboards in Metabase; Python automation for reports.</li>
+            <li>Partnered with product & retention teams for decision support.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <div class="grid col-3">
+        <div class="panel">
+          <h3>Languages & Tools</h3>
+          <p>Python, R, SQL, PostgreSQL, MySQL, BigQuery, Hadoop, Metabase, Tableau, Power BI, Looker Studio, Excel</p>
+        </div>
+        <div class="panel">
+          <h3>Data Expertise</h3>
+          <p>Data Analysis, Visualization, ETL Development, Data Management, Statistical Analysis</p>
+        </div>
+        <div class="panel">
+          <h3>Soft Skills</h3>
+          <p>Stakeholder Communication, Documentation, Team Leadership, Planning</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV & CONTACT -->
+    <section id="cv" class="panel" aria-labelledby="cv-heading">
+      <h2 id="cv-heading">CV & Contact</h2>
+      <p>Download the latest CV (PDF): <a href="assets/Galang_Imanta_CV.pdf">assets/Galang_Imanta_CV.pdf</a> (add the file to your repo).</p>
+      <p id="contact">📍 Bogor Regency, West Java · 📧 <a href="mailto:galangimanta557@gmail.com">galangimanta557@gmail.com</a> · 📞 <a href="tel:+6285340328599">+62 853‑4032‑8599</a></p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px">
+        <a class="btn ghost" href="https://www.linkedin.com/in/galang-imanta-ba9491140" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/galangimanta97" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="mailto:galangimanta557@gmail.com">Email me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Galang Imanta. Built with ♥ on GitHub Pages.</div>
+  </footer>
+
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // theme toggle (light/dark via attribute)
+    const toggle = document.getElementById('themeToggle');
+    const applyTheme = (t)=>{
+      if(t==='light'){document.documentElement.style.setProperty('--bg','#f7f9fc'); document.documentElement.style.setProperty('--panel','#ffffff'); document.documentElement.style.setProperty('--text','#0c1117'); document.documentElement.style.setProperty('--muted','#516275'); document.documentElement.style.setProperty('--brand','#0069ff'); document.documentElement.style.setProperty('--accent','#00c2a8');}
+      if(t==='dark'){document.documentElement.style.removeProperty('--bg'); document.documentElement.style.removeProperty('--panel'); document.documentElement.style.removeProperty('--text'); document.documentElement.style.removeProperty('--muted'); document.documentElement.style.removeProperty('--brand'); document.documentElement.style.removeProperty('--accent');}
+    }
+    const saved = localStorage.getItem('theme');
+    if(saved) applyTheme(saved);
+    toggle.addEventListener('click', ()=>{
+      const now = localStorage.getItem('theme')==='light' ? 'dark' : 'light';
+      localStorage.setItem('theme', now); applyTheme(now);
+    });
+  </script>
+
+  <!-- Optional: simple analytics (commented) -->
+  <!-- <script defer data-domain="galangimanta97.github.io" src="https://plausible.io/js/script.js"></script> -->
+</body>
+</html>
