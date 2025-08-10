@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Galang Imanta – Data Portfolio</title>
-  <meta name="description" content="Data analytics, BI, and data engineering portfolio of Galang Imanta: dashboards, ETL pipelines (Airflow/Hadoop), OpenSearch, and case studies." />
+  <meta name="description" content="Data analytics, BI, and Data Scientist portfolio of Galang Imanta: dashboards, ETL pipelines (Airflow/Hadoop), OpenSearch, and case studies." />
   <meta name="author" content="Galang Imanta" />
   <!-- Open Graph -->
   <meta property="og:title" content="Galang Imanta – Data Portfolio" />
@@ -50,8 +50,8 @@
 
     /* Mobile tweaks for hero equal-height cards */
     @media (max-width:900px){
-    .hero{grid-template-columns:1fr; align-items:start}
-    .hero .card, .hero .panel{height:auto}
+      .hero{grid-template-columns:1fr; align-items:start}
+      .hero .card, .hero .panel{height:auto}
     }
 
     section{padding:48px 0}
@@ -62,8 +62,9 @@
     .chip{display:inline-flex; align-items:center; padding:6px 10px; border-radius:999px; background:color-mix(in oklab, var(--brand), transparent 90%); border:1px solid color-mix(in oklab, var(--brand), transparent 70%); color:var(--brand); font-size:12px}
 
     /* Hero */
-    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center}
-    .hero .card{padding:24px; border-radius:22px}
+    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:stretch}
+    .hero .card{padding:24px; border-radius:22px; height:100%; display:flex; flex-direction:column}
+    .hero .panel{height:100%; display:flex; flex-direction:column}
     .badge{font-weight:600; letter-spacing:.5px}
     .pillrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
 
@@ -117,9 +118,9 @@
     <!-- HERO -->
     <section class="hero" aria-labelledby="intro-heading">
       <div class="card">
-        <span class="chip badge">DATA • BI • ANALYTICS</span>
+        <span class="chip badge">DATA • BI • ETL</span>
         <h1 id="intro-heading">Turning messy data into clear decisions.</h1>
-        <p>Hi, I’m <strong>Galang</strong> — a data professional with 4+ years of experience in analytics, BI, and Data Scientist across telco, edtech, and government. I build dashboards, automate pipelines, and uncover insights with <strong>PostgreSQL, Python, BigQuery, Hadoop</strong>, and <strong>OpenSearch</strong>.</p>
+        <p>Hi, I’m <strong>Galang</strong> — a data professional with 4+ years of experience in Analytics, BI, and Data Scientist across telco, edtech, and government. I build dashboards, automate pipelines, and uncover insights with <strong>PostgreSQL, Python, BigQuery, Tableau/Looker</strong>, and <strong>OpenSearch</strong>.</p>
         <div class="pillrow">
           <span class="chip">PostgreSQL</span>
           <span class="chip">Python</span>
@@ -233,7 +234,7 @@
     <!-- CV & CONTACT -->
     <section id="cv" class="panel" aria-labelledby="cv-heading">
       <h2 id="cv-heading">CV & Contact</h2>
-      <p>Download my latest CV (PDF): <a href="assets/Galang_Imanta_CV.pdf">Galang_Imanta_CV.pdf</a> .</p>
+      <p>Download the latest CV (PDF): <a href="assets/Galang_Imanta_CV.pdf">Galang_Imanta_CV.pdf</a>.</p>
       <p id="contact">📍 Bogor Regency, West Java · 📧 <a href="mailto:galangimanta557@gmail.com">galangimanta557@gmail.com</a> · 📞 <a href="tel:+6285340328599">+62 853‑4032‑8599</a></p>
       <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px">
         <a class="btn ghost" href="https://www.linkedin.com/in/galang-imanta-ba9491140" target="_blank" rel="noopener">LinkedIn</a>
