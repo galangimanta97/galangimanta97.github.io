@@ -66,7 +66,7 @@
     .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:stretch}
     .hero .card{padding:24px; border-radius:22px; height:100%; display:flex; flex-direction:column}
     .hero .panel{height:100%; display:flex; flex-direction:column}
-    .badge{font-weight:600; letter-spacing:.5px}
+    .badge{font-weight:600; letter-spacing:.5px; align-self:flex-start}
     .pillrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
 
     /* Cards */
@@ -121,7 +121,7 @@
       <div class="card">
         <span class="chip badge">DATA • BUSINESS INTELLIGENCE • ANALYTICS</span>
         <h1 id="intro-heading">Turning messy data into clear decisions.</h1>
-        <p>Hi, I’m <strong>Galang</strong> — a data professional with 4+ years of experience in Analytics, BI, and Data Scientist across telco, edtech, and government. I build dashboards, automate pipelines, and uncover insights with <strong>PostgreSQL, Python, BigQuery, Hadoop/Hive, Tableau/Looker</strong>, and <strong>OpenSearch</strong>.</p>
+        <p>Hi, I’m <strong>Galang</strong> — a data professional with 4+ years of experience in analytics, business intelligence, and data engineering across telco, edtech, and government. I build dashboards, automate pipelines, and uncover insights with <strong>PostgreSQL, Python, BigQuery, Hadoop/Hive, Tableau/Looker</strong>, and <strong>OpenSearch</strong>.</p>
         <div class="pillrow">
           <span class="chip">PostgreSQL</span>
           <span class="chip">Python</span>
@@ -136,16 +136,7 @@
           <a class="btn ghost" href="https://github.com/galangimanta97" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
-      <div class="card panel">
-        <h2 style="margin-bottom:6px">Quick highlights</h2>
-        <ul class="timeline" style="margin:0; padding-left:0; list-style:none">
-          <li class="titem"><strong>Ministry of Home Affairs (Pusdatin)</strong> — Data analysis & ETL for SIPD-Hub / E-Database; education–population studies for out-of-school mapping (2025).</li>
-          <li class="titem"><strong>Smartfren for Business</strong> — Revenue & churn analytics, customer segmentation (HVC), automated reporting (2023–2024).</li>
-          <li class="titem"><strong>Ruangguru</strong> — Built data marts + dashboards with BigQuery & Looker Studio (2022).</li>
-          <li class="titem"><strong>Niagahoster</strong> — Operational dashboards in Metabase, Python reporting (2020–2022).</li>
-        </ul>
-      </div>
-    </section>
+      </section>
 
     <!-- PROJECTS -->
     <section id="projects" aria-labelledby="projects-heading">
@@ -179,11 +170,16 @@
         <li class="titem">
           <div class="role">
             <span class="title">Data Scientist</span> — <span class="company">Ministry of Home Affairs, Pusdatin</span>
-            <span class="meta">· May 2025 – Present · Central Jakarta</span>
+          </div>
+          <div class="meta-row">
+            <span class="dates" data-start="2025-05" data-end="present">May 2025 – Present</span><span class="sep">·</span><span class="duration"></span>
+          </div>
+          <div class="meta-row">
+            <span class="location">Jakarta Metropolitan Area</span><span class="sep">·</span><span class="work">On-site</span>
           </div>
           <ul class="bullets">
             <li>Conduct analysis for monitoring the <em>Asta Cita</em> project, a presidential priority program.</li>
-            <li>Coordinate across ministries/institutions on data availability for Kemendagri’s Pelita and SIPD Hub.</li>
+            <li>Coordinated across ministries/agencies on data availability for Kemendagri’s Pelita and SIPD Hub.</li>
             <li>Analyzed and visualized education & population datasets to identify out‑of‑school children by province.</li>
             <li>Managed PostgreSQL, Hadoop, and OpenSearch datasets (SIPD‑Hub, SIPD, E‑Database).</li>
             <li>Built Airflow ETL pipelines integrating population, education, BPJS, and Kemenko PMK data.</li>
@@ -194,7 +190,12 @@
         <li class="titem">
           <div class="role">
             <span class="title">Data Scientist – R&D Team</span> — <span class="company">PT Optimasi Data Indonesia</span>
-            <span class="meta">· Jan 2025 – May 2025 · South Jakarta</span>
+          </div>
+          <div class="meta-row">
+            <span class="dates" data-start="2025-01" data-end="2025-05">Jan 2025 – May 2025</span><span class="sep">·</span><span class="duration"></span>
+          </div>
+          <div class="meta-row">
+            <span class="location">Jakarta Metropolitan Area</span><span class="sep">·</span><span class="work">On-site</span>
           </div>
           <ul class="bullets">
             <li>Researched OpenSearch for visualization and machine‑learning applications.</li>
@@ -206,7 +207,12 @@
         <li class="titem">
           <div class="role">
             <span class="title">Data Analyst</span> — <span class="company">PT Mediatama Indo Teknologi</span>
-            <span class="meta">· Jun 2024 – Dec 2024 · South Jakarta</span>
+          </div>
+          <div class="meta-row">
+            <span class="dates" data-start="2024-06" data-end="2024-12">Jun 2024 – Dec 2024</span><span class="sep">·</span><span class="duration"></span>
+          </div>
+          <div class="meta-row">
+            <span class="location">Jakarta Metropolitan Area</span><span class="sep">·</span><span class="work">On-site</span>
           </div>
           <ul class="bullets">
             <li>Designed and deployed 8 audit dashboards, improving performance and validation accuracy.</li>
@@ -218,7 +224,12 @@
         <li class="titem">
           <div class="role">
             <span class="title">Service & Customer Analytics Senior Specialist</span> — <span class="company">Smartfren for Business</span>
-            <span class="meta">· Feb 2023 – May 2024 · Central Jakarta</span>
+          </div>
+          <div class="meta-row">
+            <span class="dates" data-start="2023-02" data-end="2024-05">Feb 2023 – May 2024</span><span class="sep">·</span><span class="duration"></span>
+          </div>
+          <div class="meta-row">
+            <span class="location">Jakarta Metropolitan Area</span><span class="sep">·</span><span class="work">On-site</span>
           </div>
           <ul class="bullets">
             <li>Produced daily, weekly, and monthly reports for revenue, churn, and after‑sales KPIs.</li>
@@ -233,7 +244,12 @@
         <li class="titem">
           <div class="role">
             <span class="title">Business Intelligence Analyst</span> — <span class="company">Ruangguru</span>
-            <span class="meta">· Jan 2022 – Nov 2022 · South Jakarta</span>
+          </div>
+          <div class="meta-row">
+            <span class="dates" data-start="2022-01" data-end="2022-11">Jan 2022 – Nov 2022</span><span class="sep">·</span><span class="duration"></span>
+          </div>
+          <div class="meta-row">
+            <span class="location">Jakarta Metropolitan Area</span><span class="sep">·</span><span class="work">On-site</span>
           </div>
           <ul class="bullets">
             <li>Developed ETL pipelines and data marts for multiple teams.</li>
@@ -247,7 +263,12 @@
         <li class="titem">
           <div class="role">
             <span class="title">Data Analyst</span> — <span class="company">Niagahoster</span>
-            <span class="meta">· Feb 2020 – Jan 2022 · Yogyakarta</span>
+          </div>
+          <div class="meta-row">
+            <span class="dates" data-start="2020-02" data-end="2022-01">Feb 2020 – Jan 2022</span><span class="sep">·</span><span class="duration"></span>
+          </div>
+          <div class="meta-row">
+            <span class="location">Yogyakarta</span><span class="sep">·</span><span class="work">On-site</span>
           </div>
           <ul class="bullets">
             <li>Built performance dashboards in Metabase for the Retention Tribe.</li>
