@@ -11,6 +11,7 @@
   <meta property="og:description" content="Data analytics, BI, and Data Scientist projects: SIPD Hub, Hive/ORC pipelines, OpenSearch, and more." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://galangimanta97.github.io" />
+  <meta property="og:image" content="https://galangimanta97.github.io/assets/og-card.png" />
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
@@ -120,7 +121,7 @@
       <div class="card">
         <span class="chip badge">DATA • BUSINESS INTELLIGENCE • ANALYTICS</span>
         <h1 id="intro-heading">Turning messy data into clear decisions.</h1>
-        <p>Hi, I’m <strong>Galang</strong> — a data professional with 4+ years of experience in Analytics, BI, and Data Scientist across telco, edtech, and government. I build dashboards, automate pipelines, and uncover insights with <strong>PostgreSQL, Python, BigQuery, Tableau/Looker</strong>, and <strong>OpenSearch</strong>.</p>
+        <p>Hi, I’m <strong>Galang</strong> — a data professional with 4+ years of experience in Analytics, BI, and Data Scientist across telco, edtech, and government. I build dashboards, automate pipelines, and uncover insights with <strong>PostgreSQL, Python, BigQuery, Hadoop/Hive, Tableau/Looker</strong>, and <strong>OpenSearch</strong>.</p>
         <div class="pillrow">
           <span class="chip">PostgreSQL</span>
           <span class="chip">Python</span>
@@ -174,42 +175,87 @@
     <!-- EXPERIENCE -->
     <section id="experience" aria-labelledby="exp-heading">
       <h2 id="exp-heading">Experience</h2>
-      <div class="grid col-2">
-        <div class="card">
-          <h3>Data Scientist — Pusdatin Kemendagri</h3>
-          <p class="meta">May 2025 – Present · Central Jakarta</p>
-          <ul>
-            <li>Analyzed education + population data to map out-of-school children by province.</li>
-            <li>Maintained datasets across PostgreSQL, Hadoop, and OpenSearch (SIPD-Hub, SIPD, E-Database).</li>
-            <li>Built Airflow DAGs for population, education, BPJS, and Kemenko PMK data.</li>
+      <ol class="timeline exp" style="list-style:none; margin:0; padding-left:0">
+        <li class="titem">
+          <div class="role">
+            <span class="title">Data Scientist</span> — <span class="company">Ministry of Home Affairs, Pusdatin</span>
+            <span class="meta">· May 2025 – Present · Central Jakarta</span>
+          </div>
+          <ul class="bullets">
+            <li>Conduct analysis for monitoring the <em>Asta Cita</em> project, a presidential priority program.</li>
+            <li>Coordinate across ministries/institutions on data availability for Kemendagri’s Pelita and SIPD Hub.</li>
+            <li>Analyzed and visualized education & population datasets to identify out‑of‑school children by province.</li>
+            <li>Managed PostgreSQL, Hadoop, and OpenSearch datasets (SIPD‑Hub, SIPD, E‑Database).</li>
+            <li>Built Airflow ETL pipelines integrating population, education, BPJS, and Kemenko PMK data.</li>
+            <li>Documented data team activities: creating/updating Airflow DAGs, dashboards & sources, and SIPD Hub operational tables.</li>
           </ul>
-        </div>
-        <div class="card">
-          <h3>Service & Customer Analytics Sr. Specialist — Smartfren</h3>
-          <p class="meta">Feb 2023 – May 2024 · Central Jakarta</p>
-          <ul>
-            <li>Automated revenue/churn/after-sales reporting with PostgreSQL + Pentaho.</li>
-            <li>Built customer profiles & HVC segmentation for enterprise accounts.</li>
-            <li>Delivered business planning reports for Finance & Enterprise teams.</li>
+        </li>
+
+        <li class="titem">
+          <div class="role">
+            <span class="title">Data Scientist – R&D Team</span> — <span class="company">PT Optimasi Data Indonesia</span>
+            <span class="meta">· Jan 2025 – May 2025 · South Jakarta</span>
+          </div>
+          <ul class="bullets">
+            <li>Researched OpenSearch for visualization and machine‑learning applications.</li>
+            <li>Developed big‑data workflows for the ONYX Big Data Platform.</li>
+            <li>Evaluated emerging data technologies and methods.</li>
           </ul>
-        </div>
-        <div class="card">
-          <h3>BI Analyst — Ruangguru</h3>
-          <p class="meta">Jan 2022 – Nov 2022 · South Jakarta</p>
-          <ul>
-            <li>Developed ETL and data marts; validated operational transactions.</li>
-            <li>Dashboards & insights via BigQuery + Looker Studio.</li>
+        </li>
+
+        <li class="titem">
+          <div class="role">
+            <span class="title">Data Analyst</span> — <span class="company">PT Mediatama Indo Teknologi</span>
+            <span class="meta">· Jun 2024 – Dec 2024 · South Jakarta</span>
+          </div>
+          <ul class="bullets">
+            <li>Designed and deployed 8 audit dashboards, improving performance and validation accuracy.</li>
+            <li>Defined key metrics and aggregated multi‑source datasets.</li>
+            <li>Led the analyst team, managing workloads and deliverables.</li>
           </ul>
-        </div>
-        <div class="card">
-          <h3>Data Analyst — Niagahoster</h3>
-          <p class="meta">Feb 2020 – Jan 2022 · Yogyakarta</p>
-          <ul>
-            <li>Built performance dashboards in Metabase; Python automation for reports.</li>
-            <li>Partnered with product & retention teams for decision support.</li>
+        </li>
+
+        <li class="titem">
+          <div class="role">
+            <span class="title">Service & Customer Analytics Senior Specialist</span> — <span class="company">Smartfren for Business</span>
+            <span class="meta">· Feb 2023 – May 2024 · Central Jakarta</span>
+          </div>
+          <ul class="bullets">
+            <li>Produced daily, weekly, and monthly reports for revenue, churn, and after‑sales KPIs.</li>
+            <li>Built customer segmentation to identify High Value Customers (HVCs).</li>
+            <li>Monitored product expirations to minimize churn.</li>
+            <li>Automated ETL using PostgreSQL functions and Pentaho.</li>
+            <li>Created business planning and revenue reports; maintained revenue analytics data marts with Excel and Python.</li>
+            <li>Responded to ad‑hoc data needs for Finance and SECM.</li>
           </ul>
-        </div>
-      </div>
+        </li>
+
+        <li class="titem">
+          <div class="role">
+            <span class="title">Business Intelligence Analyst</span> — <span class="company">Ruangguru</span>
+            <span class="meta">· Jan 2022 – Nov 2022 · South Jakarta</span>
+          </div>
+          <ul class="bullets">
+            <li>Developed ETL pipelines and data marts for multiple teams.</li>
+            <li>Delivered dashboards and insights using BigQuery and Looker Studio.</li>
+            <li>Monitored and validated operational data transactions.</li>
+            <li>Generated insights for product evaluation (Skill Academy).</li>
+            <li>Created documentation for data marts and dashboards.</li>
+          </ul>
+        </li>
+
+        <li class="titem">
+          <div class="role">
+            <span class="title">Data Analyst</span> — <span class="company">Niagahoster</span>
+            <span class="meta">· Feb 2020 – Jan 2022 · Yogyakarta</span>
+          </div>
+          <ul class="bullets">
+            <li>Built performance dashboards in Metabase for the Retention Tribe.</li>
+            <li>Automated product update reports with Python.</li>
+            <li>Supported product monitoring and analytics.</li>
+          </ul>
+        </li>
+      </ol>
     </section>
 
     <!-- SKILLS -->
@@ -234,8 +280,8 @@
     <!-- CV & CONTACT -->
     <section id="cv" class="panel" aria-labelledby="cv-heading">
       <h2 id="cv-heading">CV & Contact</h2>
-      <p>Download the latest CV (PDF): <a href="assets/Galang_Imanta_CV.pdf">Galang_Imanta_CV.pdf</a>.</p>
-      <p id="contact">📍 Bogor Regency, West Java · 📧 <a href="mailto:galangimanta557@gmail.com">galangimanta557@gmail.com</a> · 📞 <a href="tel:+6285340328599">+62 853‑4032‑8599</a></p>
+      <p>Download the latest CV (PDF): <a href="assets/Galang_Imanta_CV.pdf" target="_blank" rel="noopener">Galang_Imanta_CV.pdf</a>.</p>
+      <p id="contact">📍 Bogor Regency, West Java · 📧 <a href="mailto:galangimanta557@gmail.com">galangimanta557@gmail.com</a> · 📞 <a href="tel:+6285340328599">+62853‑4032‑8599</a></p>
       <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px">
         <a class="btn ghost" href="https://www.linkedin.com/in/galang-imanta-ba9491140" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn ghost" href="https://github.com/galangimanta97" target="_blank" rel="noopener">GitHub</a>
